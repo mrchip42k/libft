@@ -6,9 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:10:11 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:20:27 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// TODO: check everything has ft_ prefix
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -32,8 +34,10 @@ int		ft_isprint(int c);
 //memmove
 //strlcpy
 //strlcat
-//toupper
-//tolower
+
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
 //strchr
 //strrchr
 //strncmp
