@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 09:36:49 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 09:56:23 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 // Allocate a new string,
 // concatenating (s1) and (s2).
 char	*ft_strjoin(char const *s1, char const *s2);
+
+// Allocate a new string, long at most like (s1),
+// that trims occurrences of characters in (set) at the start and end of (s1).
+char	*ft_strtrim(char const *s1, char const *set);
 
 // Allocate a new string,
 // representing the signed integer (n) as a string.
