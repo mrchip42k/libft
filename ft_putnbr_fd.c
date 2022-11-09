@@ -6,10 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:17:26 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/08 17:24:51 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 08:55:10 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Necessary for write()
 #include<unistd.h>
 
 // Recursive

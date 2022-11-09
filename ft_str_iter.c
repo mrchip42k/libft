@@ -6,10 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:31:13 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/08 18:01:28 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 08:54:41 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Necessary for malloc(), for ft_strmapi only
 #include <stdlib.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
