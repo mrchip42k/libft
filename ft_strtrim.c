@@ -6,22 +6,13 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:56:47 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 15:11:48 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:55:26 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Necessary for malloc()
 #include <stdlib.h>
-
-static size_t	st_strlen(char const *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 // return 1 if (c) is one of (set), else return 0.
 static int	st_is_trimmable(char c, char const *set)
@@ -60,7 +51,7 @@ static size_t	st_find_end(char const *s1, char const *set)
 {
 	size_t	char_i;
 
-	char_i = st_strlen(s1);
+	char_i = ft_strlen(s1);
 	while (char_i != 0)
 	{
 		char_i--;
