@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:25:50 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:06:42 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:08:06 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,14 @@ static void	st_handle_word(char const *s, size_t *char_i,
 	size_t	word_start_idx;
 	size_t	write_i;
 
-	// Skip initial separators
 	while (s[*char_i] == separator)
 		*char_i += 1;
 	word_start_idx = *char_i;
-	// Get the word length
 	while (s[*char_i] && s[*char_i] != separator)
 		*char_i += 1;
-	// Alloc string
 	*dest = malloc((*char_i - word_start_idx) + 1);
 	if (*dest)
 	{
-		// Copy
 		write_i = 0;
 		while (write_i < (*char_i - word_start_idx))
 		{
