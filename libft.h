@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 15:25:37 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:10:11 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 // Allocate a null terminated array of pointers
 //   to allocated new strings,
 // splitting (s) with the character (c).
+// Array will be null if allocating either the array or any string fails.
 char	**ft_split(char const *s, char c);
 
 // Allocate a new string,
