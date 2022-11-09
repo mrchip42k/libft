@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 09:56:23 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:25:37 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // Necessary for size_t
 # include <stddef.h>
 
-////  Part 1  ////
+////  Part 1 : Replicas of libc functions  ////
 
 //// ft_char_checks.c
 int		ft_isalpha(int c);
@@ -25,7 +25,28 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 
-////  Part 2  ////
+//strlen
+//memset
+//bzero
+//memcpy
+//memmove
+//strlcpy
+//strlcat
+//toupper
+//tolower
+//strchr
+//strrchr
+//strncmp
+//memchr
+//memcmp
+//strnstr
+//atoi
+
+// Malloc allowed:
+//calloc
+//strdup
+
+////  Part 2 : Other, see libft subject for full documentation  ////
 
 // Allocate a new string,
 // copied from (s), starting from (start), up to (len) long.
@@ -38,6 +59,11 @@ char	*ft_strjoin(char const *s1, char const *s2);
 // Allocate a new string, long at most like (s1),
 // that trims occurrences of characters in (set) at the start and end of (s1).
 char	*ft_strtrim(char const *s1, char const *set);
+
+// Allocate a null terminated array of pointers
+//   to allocated new strings,
+// splitting (s) with the character (c).
+char	**ft_split(char const *s, char c);
 
 // Allocate a new string,
 // representing the signed integer (n) as a string.
@@ -63,5 +89,13 @@ void	ft_putendl_fd(char *s, int fd);
 
 // Accepts anything in the signed int type.
 void	ft_putnbr_fd(int n, int fd);
+
+////  Bonus : Linked lists  ////
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 #endif
