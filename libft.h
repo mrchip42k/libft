@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:20:27 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:30:01 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@
 
 ////  Part 1 : Replicas of libc functions  ////
 
-//// ft_char_checks.c
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-
 //strlen
 //memset
 //bzero
@@ -34,10 +32,8 @@ int		ft_isprint(int c);
 //memmove
 //strlcpy
 //strlcat
-
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-
 //strchr
 //strrchr
 //strncmp
@@ -74,8 +70,6 @@ char	**ft_split(char const *s, char c);
 // representing the signed integer (n) as a string.
 char	*ft_itoa(int n);
 
-//// ft_str_iter.c
-
 // Allocate a new string, with the same length as (s),
 // where each character is the return of (f()).
 // (f()) takes the index of the current character, and the character from (s).
@@ -84,8 +78,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // (f()) takes the index of the current character,
 // and the pointer to the current character from (s).
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-
-//// ft_fd_writes.c
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);

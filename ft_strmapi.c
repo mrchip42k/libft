@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_iter.c                                      :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 17:31:13 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 08:54:41 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/09 17:27:45 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/09 17:28:05 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for malloc(), for ft_strmapi only
+// Necessary for malloc()
 #include <stdlib.h>
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
