@@ -6,11 +6,9 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:30:01 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:41:31 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// TODO: check everything has ft_ prefix
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -51,25 +49,20 @@ int		ft_tolower(int c);
 // Allocate a new string,
 // copied from (s), starting from (start), up to (len) long.
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
 // Allocate a new string,
 // concatenating (s1) and (s2).
 char	*ft_strjoin(char const *s1, char const *s2);
-
 // Allocate a new string, long at most like (s1),
 // that trims occurrences of characters in (set) at the start and end of (s1).
 char	*ft_strtrim(char const *s1, char const *set);
-
 // Allocate a null terminated array of pointers
 //   to allocated new strings,
 // splitting (s) with the character (c).
 // Array will be null if allocating either the array or any string fails.
 char	**ft_split(char const *s, char c);
-
 // Allocate a new string,
 // representing the signed integer (n) as a string.
 char	*ft_itoa(int n);
-
 // Allocate a new string, with the same length as (s),
 // where each character is the return of (f()).
 // (f()) takes the index of the current character, and the character from (s).
@@ -78,12 +71,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // (f()) takes the index of the current character,
 // and the pointer to the current character from (s).
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 // Like ft_putstr_fd, but appends a newline at the end.
 void	ft_putendl_fd(char *s, int fd);
-
 // Accepts anything in the signed int type.
 void	ft_putnbr_fd(int n, int fd);
 
