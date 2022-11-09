@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/08 19:13:07 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/09 09:35:51 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SOURCES =	ft_char_checks.c \
 			ft_putnbr_fd.c \
 			ft_str_iter.c \
 			ft_itoa.c \
-			ft_substr.c
+			ft_substr.c \
+			ft_strjoin.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
