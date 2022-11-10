@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 12:57:24 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 13:14:06 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ int		ft_tolower(int c);
 //strnstr
 //atoi
 
-// Malloc allowed:
-//calloc
+void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 
 ////  Part 2 : Other, see libft subject for full documentation  ////
