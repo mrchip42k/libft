@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/10 13:33:00 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/10 13:41:44 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_strdup.c \
 			ft_calloc.c \
 			ft_memcmp.c \
-			ft_memchr.c
+			ft_memchr.c \
+			ft_strchr.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
