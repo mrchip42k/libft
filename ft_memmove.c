@@ -6,13 +6,16 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:44:57 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 10:49:53 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 10:55:35 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Necessary for size_t
 #include <stddef.h>
+#include "libft.h"
 
+// Similar to ft_memcpy.
+// Goes from right to left, skips the special case check and does not return.
 static void	st_copy_left(void *dst, const void *src, size_t len)
 {
 	size_t	i;
@@ -22,19 +25,6 @@ static void	st_copy_left(void *dst, const void *src, size_t len)
 	{
 		i--;
 		((char *)dst)[i] = ((char *)src)[i];
-	}
-}
-
-// Similar to ft_memcpy. Just simpler
-static void	st_copy_right(void *dst, const void *src, size_t len)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < len)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
 	}
 }
 
@@ -50,6 +40,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (src < dst)
 		st_copy_left(dst, src, len);
 	else if (src > dst)
-		st_copy_right(dst, src, len);
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
