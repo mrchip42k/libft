@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/10 16:50:28 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/10 17:09:47 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_strnstr.c \
 			ft_atoi.c
 
-BONUS_SOURCES = ft_lstnew.c
+BONUS_SOURCES = ft_lstnew.c \
+				ft_lstadd_front.c
 
 OBJECTS = $(SOURCES:.c=.o)
 BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
