@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:25:50 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:08:06 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:02 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for malloc() and free()
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	st_count_words(char const *s, char separator)
 {

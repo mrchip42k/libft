@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:03:54 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 14:24:37 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:39 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

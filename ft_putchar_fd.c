@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:30:24 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:30:43 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:06:45 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for write()
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

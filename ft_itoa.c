@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:12:43 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 08:55:42 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:06:15 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for malloc()
-#include <stdlib.h>
+#include "libft.h"
 
 static int	st_calc_len(int n)
 {

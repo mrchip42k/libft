@@ -6,12 +6,10 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:43:21 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 16:03:08 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:05:54 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
 #include "libft.h"
 
 // man isspace

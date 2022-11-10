@@ -6,12 +6,10 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:56:47 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:55:26 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:08:01 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for malloc()
-#include <stdlib.h>
 #include "libft.h"
 
 // return 1 if (c) is one of (set), else return 0.

@@ -6,12 +6,10 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:00:58 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 12:56:39 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:18 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

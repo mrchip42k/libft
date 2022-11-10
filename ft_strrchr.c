@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:50:52 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 13:58:52 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
+#include "libft.h"
 
 // Scans left to right, remembers what it found.
 // This could also be made by finding the first result scanning right to left.

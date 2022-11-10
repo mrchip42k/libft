@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/10 15:43:14 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/10 16:50:28 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,10 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_strnstr.c \
 			ft_atoi.c
 
+BONUS_SOURCES = ft_lstnew.c
+
 OBJECTS = $(SOURCES:.c=.o)
+BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -57,7 +60,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -66,3 +69,6 @@ re: fclean all
 
 $(NAME): $(OBJECTS)
 	ar -c -r -s $(NAME) $(OBJECTS)
+
+bonus: $(OBJECTS) $(BONUS_OBJECTS)
+	ar -c -r -s $(NAME) $(OBJECTS) $(BONUS_OBJECTS)

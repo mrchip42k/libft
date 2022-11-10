@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:25:49 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 15:41:37 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:50 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
+#include "libft.h"
 
 // We could also stop if there is not enough space to find the needle,
 //  that would be done by precalculating lengths,

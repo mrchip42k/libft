@@ -6,12 +6,10 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:59:44 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 11:17:19 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 17:07:21 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Necessary for size_t
-#include <stddef.h>
 #include "libft.h"
 
 // This could probably be achieved with memcpy or memmove calls.
