@@ -6,11 +6,11 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/10 17:59:44 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/10 18:26:53 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# ametzen libft v1
+# ametzen libft v1. surely, i will never forget to update this number.
 
 NAME = libft.a
 
@@ -56,7 +56,8 @@ BONUS_SOURCES = ft_lstnew.c \
 				ft_lstadd_back.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
-				ft_lstiter.c
+				ft_lstiter.c \
+				ft_lstmap.c
 
 OBJECTS = $(SOURCES:.c=.o)
 BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
