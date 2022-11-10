@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 13:14:06 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 13:22:37 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		ft_tolower(int c);
 //strrchr
 //strncmp
 //memchr
-//memcmp
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 //strnstr
 //atoi
 
