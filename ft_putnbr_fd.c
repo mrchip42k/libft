@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:17:26 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 08:55:10 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/10 16:09:59 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include<unistd.h>
 
 // Recursive
-static void	st_nbrput_fd(int nb, int fd)
+static void	st_putnbr_fd_mini(int nb, int fd)
 {
 	int		one_less_digit;
 	char	nb_as_char;
@@ -22,7 +22,7 @@ static void	st_nbrput_fd(int nb, int fd)
 	one_less_digit = nb / 10;
 	if (one_less_digit > 0)
 	{
-		st_nbrput_fd(one_less_digit, fd);
+		st_putnbr_fd_mini(one_less_digit, fd);
 	}
 	nb_as_char = '0' + (nb % 10);
 	write(fd, &nb_as_char, 1);
@@ -49,5 +49,5 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		write(fd, "-", 1);
 	}
-	st_nbrput_fd(n, fd);
+	st_putnbr_fd_mini(n, fd);
 }
