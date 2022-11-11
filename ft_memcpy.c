@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:25:44 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:06:30 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 09:45:28 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 //  can't also skip if either of them are null (|| instead of &&).
 // Unless this behaviour comes from the original memcpy, and had to be carried
 //  on for compatibility.
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;

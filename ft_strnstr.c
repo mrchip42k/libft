@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:25:49 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:07:50 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 09:47:19 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ static char	*st_search(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-// (len) is the limit of (haystack), not (needle)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	if (needle[0] == '\0')

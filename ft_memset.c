@@ -6,13 +6,14 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:01:44 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:06:39 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 09:46:33 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // why is (c) an int? we're writing single bytes anyways.
+
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;

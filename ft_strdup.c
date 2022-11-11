@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:57:36 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:07:10 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 09:46:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 // Deliberately setting errno = ENOMEM; is not needed since malloc() already
 //  does it.
+
 char	*ft_strdup(const char *s1)
 {
 	char	*new_string;

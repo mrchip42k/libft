@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:17:26 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:06:51 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 09:46:41 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	st_putnbr_fd_mini(int nb, int fd)
 // - min int
 // - zero
 // Then, nbrput() handles the rest
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
