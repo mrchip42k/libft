@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/11 13:59:57 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/11 14:25:40 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,3 @@ $(NAME): $(OBJECTS)
 
 bonus: $(OBJECTS) $(BONUS_OBJECTS)
 	ar -c -r -s $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
-
-# For debugging.
-# TEST: $(SOURCES) $(BONUS_SOURCES) ../main.c
-# 	gcc $(CFLAGS) -g -o "TEST" $(SOURCES) $(BONUS_SOURCES) ../main.c
