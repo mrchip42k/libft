@@ -6,9 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/11 11:35:16 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:10:54 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ametzen libft v1
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -112,11 +114,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 // ( f() ) will be called as many times as there are list items.
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 // /!\ Uses: malloc(), free()
-// ( f() ) needs to malloc the element it returns.
+// ( f() ) needs to malloc the element it returns. (f() may return NULL)
 // Does nothing and returns NULL if (lst), ( f() ), or ( del() ) are NULL.
 // (More info in source code)
 // Will free whatever was created using ( del() ) if mallocs fail.
-// However, ( f() ) is allowed to return NULL as content.
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
