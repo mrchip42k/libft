@@ -6,12 +6,12 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/12 17:24:28 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/12 17:33:28 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ametzen libft v1: completely validated
-# v2: TODO changelog
+# v2: TODO changelog + update v number in libft.h
 
 NAME = libft.a
 
