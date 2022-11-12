@@ -6,25 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:44:57 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/11 09:46:22 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/12 17:01:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// Similar to ft_memcpy.
-// Goes from right to left, skips the special case check and does not return.
-static void	st_copy_left(void *dst, const void *src, size_t len)
-{
-	size_t	i;
-
-	i = len;
-	while (i > 0)
-	{
-		i--;
-		((char *)dst)[i] = ((char *)src)[i];
-	}
-}
 
 // If (src) and (dst) are equal, do nothing.
 // If (src) is before (dst), copy right to left.
@@ -37,7 +23,7 @@ static void	st_copy_left(void *dst, const void *src, size_t len)
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (src < dst)
-		st_copy_left(dst, src, len);
+		ft_memcpy_left(dst, src, len);
 	else if (src > dst)
 		ft_memcpy(dst, src, len);
 	return (dst);
