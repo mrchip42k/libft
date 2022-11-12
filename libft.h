@@ -6,11 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/11 14:10:54 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/12 15:57:20 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ametzen libft v1
+// ametzen libft v2
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -119,5 +119,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 // (More info in source code)
 // Will free whatever was created using ( del() ) if mallocs fail.
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+////  Personal additions  ////
 
 #endif

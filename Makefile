@@ -6,11 +6,12 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/11 14:25:40 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/12 15:55:20 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# ametzen libft v1. surely, i will never forget to update this number.
+# ametzen libft v1: completely validated
+# v2: TODO changelog
 
 NAME = libft.a
 
@@ -47,20 +48,18 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
-			ft_atoi.c
-
-BONUS_SOURCES = ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c
+			ft_atoi.c \
+			ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 
 OBJECTS = $(SOURCES:.c=.o)
-BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -68,7 +67,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 clean:
-	rm -f $(OBJECTS) $(BONUS_OBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -77,6 +76,3 @@ re: fclean all
 
 $(NAME): $(OBJECTS)
 	ar -c -r -s $(NAME) $(OBJECTS)
-
-bonus: $(OBJECTS) $(BONUS_OBJECTS)
-	ar -c -r -s $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
