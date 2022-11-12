@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/12 17:06:09 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/12 17:24:28 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,8 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 			ft_isspace.c \
-			ft_memcpy_left.c
+			ft_memcpy_left.c \
+			ft_debug_print_list.c # FIXME unacceptable dependencies
 
 OBJECTS = $(SOURCES:.c=.o)
 

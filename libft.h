@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/12 17:05:15 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/12 17:31:03 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 ////  Part 1 : Replicas of libc functions  ////
 
@@ -120,9 +121,7 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 // Will free whatever was created using ( del() ) if mallocs fail.
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-////  Personal additions  ////
-
-// Moved from static
+////  Personal additions ft++ : Moved from static  ////
 
 // (ft++)
 // man isspace
@@ -131,5 +130,16 @@ int			ft_isspace(char c);
 // Similar to ft_memcpy.
 // Goes from right to left, skips the special case check and does not return.
 void		ft_memcpy_left(void *dst, const void *src, size_t len);
+
+////  Personal additions ft++  ////
+
+// /!\ Uses: printf(stdio) FIXME replace with ft_printf when ready
+// (ft++)
+// ( content_printer() ) takes a pointer to the content,
+//  and prints it.
+// It should NOT newline.
+// Description is shown at the start of the list.
+void	ft_debug_print_list(t_list **lst
+		, void (*content_printer)(void *), char *description);
 
 #endif
