@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:44:57 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/12 17:01:56 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/12 17:41:10 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (src < dst)
-		ft_memcpy_left(dst, src, len);
+		ft_mini_memcpy_left(dst, src, len);
 	else if (src > dst)
 		ft_memcpy(dst, src, len);
 	return (dst);

@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/12 17:37:05 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/12 17:40:27 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,7 @@ int			ft_isspace(char c);
 // > ft++
 // Similar to ft_memcpy.
 // Goes from right to left, skips the special case check and does not return.
-void		ft_memcpy_left(void *dst, const void *src, size_t len);
+void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
 
 ////  Personal additions ft++  ////
 
