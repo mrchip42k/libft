@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/12 17:40:27 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/13 10:07:03 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,13 +155,13 @@ void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
 
 ////  Personal additions ft++  ////
 
-// > /!\ Uses: printf(stdio) FIXME replace with ft_printf when ready
+// > /!\ Uses: printf(stdio) FIXME when fixed, uncomment
 // > ft++
 // ( content_printer() ) takes a pointer to the content,
 //  and prints it.
 // It should NOT newline.
 // Description is shown at the start of the list.
-void	ft_debug_print_list(t_list **lst
-		, void (*content_printer)(void *), char *description);
+// void	ft_debug_print_list(t_list **lst
+// 		, void (*content_printer)(void *), char *description);
 
 #endif
