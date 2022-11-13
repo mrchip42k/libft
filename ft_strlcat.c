@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:00:58 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:07:18 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/13 10:22:25 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_i;
 
 	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
+	dst_len = ft_prot_strlen(dst);
 	if (dstsize == 0 || dstsize < dst_len)
 		return (dstsize + src_len);
 	src_i = 0;

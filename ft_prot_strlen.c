@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_prot_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 13:41:48 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/13 10:41:09 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/09 17:52:00 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/13 10:20:25 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_prot_strlen(const char *s)
 {
-	char	converted_c;
-	size_t	i;
+	size_t	len;
 
-	converted_c = c;
-	i = 0;
-	if (converted_c == '\0')
-	{
-		while (s[i])
-			i++;
-		return ((void *)&s[i]);
-	}
-	else
-	{
-		while (s[i])
-		{
-			if (converted_c == s[i])
-				return ((void *)&s[i]);
-			i++;
-		}
-		return (NULL);
-	}
+	if (s == NULL)
+		return (0);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
