@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:25:50 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:07:02 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:38:44 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,23 +90,24 @@ char	**ft_split(char const *s, char c)
 	size_t	word_i;
 	size_t	char_i;
 
+	if (s == NULL)
+		return (NULL);
 	word_count = st_count_words(s, c);
 	new_array = malloc(sizeof(*new_array) * (word_count + 1));
-	if (new_array)
+	if (new_array == NULL)
+		return (NULL);
+	char_i = 0;
+	word_i = 0;
+	while (word_i < word_count)
 	{
-		char_i = 0;
-		word_i = 0;
-		while (word_i < word_count)
+		st_handle_word(s, &char_i, c, &new_array[word_i]);
+		if (new_array[word_i] == 0)
 		{
-			st_handle_word(s, &char_i, c, &new_array[word_i]);
-			if (new_array[word_i] == 0)
-			{
-				st_abort(new_array);
-				return (0);
-			}
-			word_i++;
+			st_abort(new_array);
+			return (0);
 		}
-		new_array[word_count] = 0;
+		word_i++;
 	}
+	new_array[word_count] = 0;
 	return (new_array);
 }

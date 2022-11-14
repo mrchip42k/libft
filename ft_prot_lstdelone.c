@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_prot_lstdelone.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:20:18 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:01:24 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/14 11:50:28 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/14 11:53:59 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_prot_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + ('a' - 'A'));
-	else
-		return (c);
+	if (lst && del)
+	{
+		if (lst->content)
+			del(lst->content);
+		free(lst);
+	}
 }

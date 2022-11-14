@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/13 10:21:43 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/14 12:02:43 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,9 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_lstmap.c \
 			ft_isspace.c \
 			ft_mini_memcpy_left.c \
-			ft_prot_strlen.c
+			ft_prot_strlen.c \
+			ft_prot_lstclear.c \
+			ft_prot_lstdelone.c
 #			ft_debug_print_list.c # FIXME unacceptable dependencies
 
 OBJECTS = $(SOURCES:.c=.o)

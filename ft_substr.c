@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 19:12:11 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:08:05 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:20:55 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			real_length;
 	unsigned int	i;
 
+	if (s == NULL)
+		return (NULL);
 	real_length = st_calc_length(s, start, len);
 	new_str = malloc(real_length + 1);
 	if (new_str != 0)

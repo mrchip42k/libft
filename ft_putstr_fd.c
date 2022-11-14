@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:30:49 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:06:55 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:40:45 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
 
-	len = 0;
-	while (s[len])
-		len++;
-	write(fd, s, len);
+	if (s)
+	{
+		len = 0;
+		while (s[len])
+			len++;
+		write(fd, s, len);
+	}
 }

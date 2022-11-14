@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 10:54:09 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:56:08 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 // ❗️ Uses system call(s). Check if it's allowed!
 // 📂 The category this function is from.
 // 💥 Will crash under this condition.
+// ☢️ Easily misused. Know what you're doing.
 // - General explanation on how to use the function, or what it does, goes here-
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -163,8 +164,12 @@ int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 // ❗️ Uses: free()
+// 💥 ( del() ) == NULL.
+// I'd rather find out this crashed, than let this silently leak memory
 void		ft_lstdelone(t_list *lst, void (*del)(void*));
 // ❗️ Uses: free()
+// 💥 ( lst || del() ) == NULL. (🛡 Protected version available)
+// I'd rather find out this crashed, than let this silently leak memory
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 // Content is NOT null checked. That's the responsibility of ( f() ).
 // ( f() ) will be called for EVERY item in the list.
@@ -187,6 +192,23 @@ int			ft_isspace(char c);
 // Similar to ft_memcpy.
 // Goes from right to left, skips the special case check and does not return.
 void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
+
+////////////////////////////////////////////////////////////////////////////////
+////  Personal additions ft++ : Protected versions  ////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// ❗️ Uses: free()
+// 📂 ft++
+// ☢️ WARNING: Protection may cause this to silently leak.
+//  Consider using the unprotected version to notice if the function is misused.
+void		ft_prot_lstclear(t_list **lst, void (*del)(void*));
+// ❗️ Uses: free()
+// 📂 ft++
+// ☢️ WARNING: Protection may cause this to silently leak.
+//  Consider using the unprotected version to notice if the function is misused.
+void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
+
+//TODO
 
 ////////////////////////////////////////////////////////////////////////////////
 ////  Personal additions ft++  /////////////////////////////////////////////////

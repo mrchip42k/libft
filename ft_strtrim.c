@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:56:47 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/10 17:08:01 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:35:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end_idx;
 	size_t	i;
 
+	if (s1 == NULL)
+		return (NULL);
+	if (set == NULL)
+		return (ft_strdup(s1));
 	start_idx = st_find_start(s1, set);
 	end_idx = st_find_end(s1, set);
 	if (start_idx >= end_idx)

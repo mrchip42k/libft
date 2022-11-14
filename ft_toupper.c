@@ -6,9 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:16:11 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/09 17:21:44 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:01:27 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
