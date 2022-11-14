@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prot_strlen.c                                   :+:      :+:    :+:   */
+/*   ft_prot_memset.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:52:00 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:42:00 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/14 12:06:34 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/14 12:57:16 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_prot_strlen(const char *s)
+void	*ft_prot_memset(void *b, int c, size_t len)
 {
-	if (s == NULL)
-		return (0);
-	return (ft_strlen(s));
+	if (b == NULL)
+		return (b);
+	return (ft_memset(b, c, len));
 }

@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/14 12:02:43 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/14 13:10:35 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,19 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_mini_memcpy_left.c \
 			ft_prot_strlen.c \
 			ft_prot_lstclear.c \
-			ft_prot_lstdelone.c
+			ft_prot_lstdelone.c \
+			ft_prot_memset.c \
+			ft_prot_bzero.c \
+			ft_prot_memcpy.c \
+			ft_prot_memmove.c \
+			ft_prot_strlcpy.c \
+			ft_prot_strlcat.c \
+			ft_prot_strchr.c \
+			ft_prot_strrchr.c \
+			ft_prot_memchr.c \
+			ft_prot_strnstr.c \
+			ft_prot_atoi.c \
+			ft_prot_strdup.c
 #			ft_debug_print_list.c # FIXME unacceptable dependencies
 
 OBJECTS = $(SOURCES:.c=.o)

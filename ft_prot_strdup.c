@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prot_strlen.c                                   :+:      :+:    :+:   */
+/*   ft_prot_strdup.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:52:00 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:42:00 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/14 13:10:40 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/14 13:14:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_prot_strlen(const char *s)
+char	*ft_prot_strdup(const char *s1)
 {
-	if (s == NULL)
-		return (0);
-	return (ft_strlen(s));
+	if (s1 == NULL)
+		return (NULL);
+	return (ft_strdup(s1));
 }

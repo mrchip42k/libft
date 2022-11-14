@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prot_strlen.c                                   :+:      :+:    :+:   */
+/*   ft_prot_strnstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:52:00 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:42:00 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/14 12:56:19 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/14 13:00:39 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_prot_strlen(const char *s)
+char	*ft_prot_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (s == NULL)
-		return (0);
-	return (ft_strlen(s));
+	if (haystack == NULL || needle == NULL || len == 0)
+		return (NULL);
+	return (ft_strnstr(haystack, needle, len));
 }

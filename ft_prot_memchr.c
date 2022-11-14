@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prot_strlen.c                                   :+:      :+:    :+:   */
+/*   ft_prot_memchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:52:00 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:42:00 by ametzen          ###   ########.fr       */
+/*   Created: 2022/11/14 12:53:30 by ametzen           #+#    #+#             */
+/*   Updated: 2022/11/14 12:57:03 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_prot_strlen(const char *s)
+void	*ft_prot_memchr(const void *s, int c, size_t n)
 {
-	if (s == NULL)
-		return (0);
-	return (ft_strlen(s));
+	if (s == NULL || n == 0)
+		return (NULL);
+	return (ft_memchr(s, c, n));
 }

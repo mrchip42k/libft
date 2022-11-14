@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 11:56:08 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 13:16:36 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void		*ft_memset(void *b, int c, size_t len);
 // 💥 (s) == NULL
 void		ft_bzero(void *s, size_t n);
 // 📂 libc replica
-// 💥 either (src) || (dst) == NULL
-// DOESNT crash if BOTH (src) && (dst) == NULL
+// 💥 either (src) || (dst) == NULL,
+//    DOESNT crash if BOTH (src) && (dst) == NULL
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 // 📂 libc replica
 // 💥 Same crash rules as ft_memcpy, since it calls it.
@@ -189,6 +189,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // 📂 ft++ (libc replica)
 int			ft_isspace(char c);
 // 📂 ft++
+// 💥 (dst || src) == NULL
 // Similar to ft_memcpy.
 // Goes from right to left, skips the special case check and does not return.
 void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
@@ -197,18 +198,72 @@ void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
 ////  Personal additions ft++ : Protected versions  ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// ℹ️ A comment on protected functions
+// The original versions are not protected because they assume they are fed
+// correct arguments.
+// Calling protected versions has its place, but:
+// A. Their behaviour may differ
+// B. They may silently do nonsense, and push crashes downstream in their users.
+// Prot fn only care about "I should never crash. Not my problem". Nothing else.
+// Use braincells, as usual. Read the comments. Read the implementations.
+
+// 📂 ft++ / prot libc
+// Like strlen, but returns 0 instead of crashing if (s) == NULL.
+size_t		ft_prot_strlen(const char *s);
+// 📂 ft++ / prot libc
+// Like memset, but does nothing if (b) == NULL.
+void		*ft_prot_memset(void *b, int c, size_t len);
+// 📂 ft++ / prot libc
+// Like bzero, but does nothing if (s) == NULL.
+void		ft_prot_bzero(void *s, size_t n);
+// 📂 ft++ / prot libc
+// Like memcpy, but returns (dst) immediately if either == NULL.
+void		*ft_prot_memcpy(void *dst, const void *src, size_t n);
+// 📂 ft++ / prot libc
+// 💥 TODO can this crash if len is incorrect?
+// Like memmove, but returns (dst) immediately if (src || dst) == NULL.
+void		*ft_prot_memmove(void *dst, const void *src, size_t len);
+// 📂 ft++ / prot libc
+// Like strlcpy, but returns (prot_len(src)) immediately if (dst || src) == NULL
+size_t		ft_prot_strlcpy(char *dst, const char *src, size_t dstsize);
+// 📂 ft++ / prot libc
+// Like strlcat, but can't crash.
+size_t		ft_prot_strlcat(char *dst, const char *src, size_t dstsize);
+// 📂 ft++ / prot libc
+// Like strchr, but can't crash.
+char		*ft_prot_strchr(const char *s, int c);
+// 📂 ft++ / prot libc
+// Like strrchr, but can't crash.
+char		*ft_prot_strrchr(const char *s, int c);
+// 📂 ft++ / prot libc
+// Like memchr, but can't crash.
+void		*ft_prot_memchr(const void *s, int c, size_t n);
+// 📂 ft++ / prot libc
+// Like strnstr, but can't crash.
+char		*ft_prot_strnstr(const char *haystack,
+				const char *needle, size_t len);
+// 📂 ft++ / prot libc
+// Like atoi, but if (str) == NULL, return 0.
+int			ft_prot_atoi(const char *str);
+// ❗️ Uses: malloc()
+// 📂 ft++ / prot libc
+// ☢️ Ambiguous return: null input, OR malloc error
+// Like strdup, but returns NULL instead of crashing if (s1) == NULL.
+char		*ft_prot_strdup(const char *s1);
+
+// TODO write "Protected Available"
+// TODO "Ambiguous Return"
+
 // ❗️ Uses: free()
-// 📂 ft++
+// 📂 ft++ / prot bonus
 // ☢️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void		ft_prot_lstclear(t_list **lst, void (*del)(void*));
 // ❗️ Uses: free()
-// 📂 ft++
+// 📂 ft++ / prot bonus
 // ☢️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
-
-//TODO
 
 ////////////////////////////////////////////////////////////////////////////////
 ////  Personal additions ft++  /////////////////////////////////////////////////
@@ -220,11 +275,7 @@ void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
 //  and prints it.
 // It should NOT newline.
 // Description is shown at the start of the list.
-// void	ft_debug_print_list(t_list **lst
-// 		, void (*content_printer)(void *), char *description);
-
-// 📂 ft++
-// Like ft_strlen, but returns 0 instead of crashing if (s) == NULL.
-size_t		ft_prot_strlen(const char *s);
+// void	ft_debug_print_list(t_list **lst,
+// 			void (*content_printer)(void *), char *description);
 
 #endif
