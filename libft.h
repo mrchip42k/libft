@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 13:53:45 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 13:54:29 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 // ❗️ Uses system call(s). Check if it's allowed!
 // 📂 The category this function is from.
 // 💥 Will crash under this condition.
-// ☢️ Easily misused. Know what you're doing.
+// ☢️❗️ Easily misused. Know what you're doing.
 // - General explanation on how to use the function, or what it does, goes here-
 
 ////////////////////////////////////////////////////////////////////////////////
