@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/13 11:42:09 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/14 10:54:09 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+
+//// Function description explanation
+// ❗️ Uses system call(s). Check if it's allowed!
+// 📂 The category this function is from.
+// 💥 Will crash under this condition.
+// - General explanation on how to use the function, or what it does, goes here-
 
 ////////////////////////////////////////////////////////////////////////////////
 ////  Part 1 : Replicas of libc functions  /////////////////////////////////////
