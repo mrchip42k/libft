@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/14 13:54:29 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/15 11:49:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -265,6 +265,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // Use braincells, as usual. Read the comments. Read the implementations.
 
 // 📂 ft++ / 🛡 prot libc
+// 🔁💥 Will get stuck / potentially segfault if (s) is non-terminated.
 // Like strlen, but returns 0 instead of crashing if (s) == NULL.
 size_t		ft_prot_strlen(const char *s);
 
