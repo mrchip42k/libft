@@ -6,12 +6,12 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/26 16:20:16 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/26 16:59:47 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ametzen libft v1: completely validated
-# v2: TODO changelog + update v number in libft.h
+# v2: *TODO changelog + update v number in libft.h
 
 NAME = libft.a
 
@@ -76,6 +76,25 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_prot_atoi.c \
 			ft_prot_strdup.c \
 			ft_debug_print_list.c \
+			ft_frull.c \
+			\
+			ft_printf/ft_printf.c \
+			ft_printf/misc/ftt_block_list_utils.c \
+			ft_printf/misc/ftt_num2str.c \
+			\
+            ft_printf/parser/ftt_parse1_find_splits.c \
+            ft_printf/parser/ftt_parse2_dup_fmt.c \
+            ft_printf/parser/ftt_parse3_result.c \
+            ft_printf/parser/ftt_parse_fmt.c \
+			\
+			ft_printf/process/ftt_process_unformatted.c \
+			ft_printf/process/ftt_process_char.c \
+			ft_printf/process/ftt_process_string.c \
+			ft_printf/process/ftt_process_percent.c \
+			ft_printf/process/ftt_process_hexaddress.c \
+			ft_printf/process/ftt_process_sint_decimal.c \
+			ft_printf/process/ftt_process_uint_decimal.c \
+			ft_printf/process/ftt_process_uint_hex.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/15 11:49:56 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:00:37 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+// va_start va_end va_arg va_copy
+# include <stdarg.h>
 
 //// Function description explanation
 // ❗️ Uses system call(s). Check if it's allowed!
@@ -116,7 +118,7 @@ int			ft_atoi(const char *str);
 
 // ❗️ Uses: malloc()
 // 📂 libc replica
-// ❓ No protection for 0 size or count? TODO figure this out
+// ❓ *REVIEW figure this out: No protection for 0 size or count?
 void		*ft_calloc(size_t count, size_t size);
 
 // ❗️ Uses: malloc()
@@ -284,7 +286,7 @@ void		ft_prot_bzero(void *s, size_t n);
 void		*ft_prot_memcpy(void *dst, const void *src, size_t n);
 
 // 📂 ft++ / 🛡 prot libc
-// 💥 TODO can this crash if len is incorrect?
+// 💥 *REVIEW can this crash if len is incorrect?
 // Like memmove, but returns (dst) immediately if (src || dst) == NULL.
 // 🤔 Maybe useless
 void		*ft_prot_memmove(void *dst, const void *src, size_t len);
@@ -331,11 +333,23 @@ char		*ft_prot_strdup(const char *s1);
 // ☢️❗️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void		ft_prot_lstclear(t_list **lst, void (*del)(void*));
+
 // ❗️ Uses: free()
 // 📂 ft++ / 🛡 prot bonus
 // ☢️❗️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////    /    /    ////
+////  Other projects ft++  //////////////////////////////////  --+----+--  /////
+////////////////////////////////////////////////////////////    /    /    //////
+////////////////////////////////////////////////////////////////////////////////
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: write()
+// ❗️ Uses: va_start va_end va_arg va_copy
+int			ft_printf(const char *fmt, ...);
 
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////    /    /    ////
@@ -347,19 +361,23 @@ void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
 
 // 📂 ft++ (libc replica)
 int			ft_isspace(char c);
+
 // 📂 ft++
 // 💥 (dst || src) == NULL
 // Similar to ft_memcpy.
 // Goes from right to left, skips the special case check and does not return.
 void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
 
-// ❗️ Uses: printf(stdio) FIXME when fixed, uncomment
+// ❗️ Uses: free()
+// 📂 ft++
+void		*ft_frull(void **ptr);
+
 // 📂 ft++
 // ( content_printer() ) takes a pointer to the content,
 //  and prints it.
 // It should NOT newline.
 // Description is shown at the start of the list.
-// void	ft_debug_print_list(t_list **lst,
-// 			void (*content_printer)(void *), char *description);
+void	ft_debug_print_list(t_list **lst,
+			void (*content_printer)(void *), char *description);
 
 #endif
