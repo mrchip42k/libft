@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/14 13:10:35 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/26 16:20:16 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,8 +74,8 @@ SOURCES =	ft_putnbr_fd.c \
 			ft_prot_memchr.c \
 			ft_prot_strnstr.c \
 			ft_prot_atoi.c \
-			ft_prot_strdup.c
-#			ft_debug_print_list.c # FIXME unacceptable dependencies
+			ft_prot_strdup.c \
+			ft_debug_print_list.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -6,12 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:13:39 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/12 17:25:10 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 16:19:58 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> //FIXME replace with ft_printf when ready
 
 // number is arbitrary to give small results and hopefully align less to blocks
 // that would easily give collisions
@@ -30,17 +29,17 @@ void	ft_debug_print_list(t_list **lst
 	i = 0;
 	short_addr = st_ptr_short(lst);
 	current = *lst;
-	printf("---v LIST @%p/%d\t\"%s\" v---\n", lst, short_addr, description);
+	ft_printf("---v LIST @%p/%d\t\"%s\" v---\n", lst, short_addr, description);
 	while (current)
 	{
-		printf("Element %d\t@%p/%d\t: Content @%p/%d\t: ",
+		ft_printf("Element %d\t@%p/%d\t: Content @%p/%d\t: ",
 			i, current, st_ptr_short(current),
 			current->content, st_ptr_short(current->content));
 		content_printer(current->content);
-		printf("\n");
+		ft_printf("\n");
 		i++;
 		current = current->next;
 	}
-	printf("---^ LIST @%p/%d\t\"%s\" ^--- Size = %d\n\n",
+	ft_printf("---^ LIST @%p/%d\t\"%s\" ^--- Size = %d\n\n",
 		lst, short_addr, description, i);
 }
