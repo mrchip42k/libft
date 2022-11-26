@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/26 17:15:41 by ametzen          ###   ########.fr        #
+#    Updated: 2022/11/26 17:53:15 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,12 +79,13 @@ SOURCES =	$(SOURCES_PRINTF) \
 			ft_prot_strdup.c \
 			ft_debug_print_list.c \
 			ft_frull.c \
+			ft_num2str.c \
+			ft_num2str_special.c \
 
 SOURCES_PRINTF = $(addprefix ft_printf/, \
 					ft_printf.c \
 					\
 					misc/ftt_block_list_utils.c \
-					misc/ftt_num2str.c \
 					\
 					parser/ftt_parse1_find_splits.c \
 					parser/ftt_parse2_dup_fmt.c \
@@ -109,7 +110,7 @@ SOURCES_GNL = $(addprefix get_next_line/, \
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g # TODO Debug mode! Remove this
 
 all: $(NAME)
 

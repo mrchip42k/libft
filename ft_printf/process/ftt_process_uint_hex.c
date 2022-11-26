@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:34:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/21 17:25:03 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:22:06 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ bool	ftt_process_uint_hex(struct s_block *block, va_list args,
 	unsigned int	arg;
 
 	arg = va_arg(args, unsigned int);
-	block->final_content = ftt_num2str_base((long long) arg, base);
+	block->final_content = ft_num2str_base((long long) arg, base);
 	return (block->final_content != NULL);
 }

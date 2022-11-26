@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:25:09 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 17:09:25 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:57:17 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,6 @@ void			ftt_delete_block(void *block_voidp);
 // Just call ft_lstclear, but return NULL so this can be placed inside return ()
 // Wont set the source pointer to NULL since this is meant for returns
 t_list			*ftt_clear_blocks(t_list *block_list);
-
-// ❗️ Uses: malloc()
-// Returns string, or NULL if error (should never happen?)
-char			*ftt_num2str(long n);
-
-// ❗️ Uses: malloc()
-// Returns string, or NULL if error (base missing)
-char			*ftt_num2str_base(long n, const char *base);
 
 //  ftt_parser/  ///////////////////////////////////////////////////////////////
 

@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 17:17:27 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:57:46 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -383,12 +383,23 @@ void		ft_mini_memcpy_left(void *dst, const void *src, size_t len);
 // 📂 ft++
 void		*ft_frull(void **ptr);
 
+// ❗️ Uses: malloc()
+// Returns:
+// -> new Heap String
+// -> NULL, if error (should never happen?)
+char		*ft_num2str(long n);
+
+// ❗️ Uses: malloc()
+// -> new Heap String
+// -> NULL, if error (base is missing or invalid)
+char		*ft_num2str_base(long n, const char *base);
+
 // 📂 ft++
 // ( content_printer() ) takes a pointer to the content,
 //  and prints it.
 // It should NOT newline.
 // Description is shown at the start of the list.
-void	ft_debug_print_list(t_list **lst,
-			void (*content_printer)(void *), char *description);
+void		ft_debug_print_list(t_list **lst,
+				void (*content_printer)(void *), char *description);
 
 #endif

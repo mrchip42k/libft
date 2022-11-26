@@ -3,5 +3,5 @@
 *.a
 .idea
 .vscode
-a.out
+a.out*
 main.c

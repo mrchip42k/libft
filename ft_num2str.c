@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftt_num2str.c                                      :+:      :+:    :+:   */
+/*   ft_num2str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 17:12:34 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/22 15:16:02 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:34:56 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
+
+char	*ft_n2s_base_funnynumber(const char *base, size_t base_len);
+char	*ft_n2s_base_zero(const char *base);
 
 static size_t	st_predict_length(long n, size_t base_len)
 {
@@ -68,34 +71,23 @@ static char	*st_n2s_base_unprotected(long n, const char *base,
 	return (result);
 }
 
-// TODO: funny number (now errors instead)
-char	*ftt_num2str_base(long n, const char *base)
+char	*ft_num2str_base(long n, const char *base)
 {
 	size_t	base_len;
-	char	*zero;
 
 	if (base == NULL)
 		return (NULL);
 	base_len = ft_prot_strlen(base);
-	if (base_len == 0)
-		return (NULL);
-	if (base_len == 1)
+	if (base_len <= 1)
 		return (NULL);
 	if (n == 0)
-	{
-		zero = malloc(2);
-		if (zero == NULL)
-			return (NULL);
-		zero[0] = base[0];
-		zero[1] = '\0';
-		return (zero);
-	}
+		return (ft_n2s_base_zero(base));
 	if (n == -9223372036854775807)
-		return (NULL);
+		return (ft_n2s_base_funnynumber(base, base_len));
 	return (st_n2s_base_unprotected(n, base, base_len));
 }
 
-char	*ftt_num2str(long n)
+char	*ft_num2str(long n)
 {
-	return (ftt_num2str_base(n, "0123456789"));
+	return (ft_num2str_base(n, "0123456789"));
 }
