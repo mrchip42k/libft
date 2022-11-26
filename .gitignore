@@ -2,3 +2,6 @@
 *.o
 *.a
 .idea
+.vscode
+a.out
+main.c
