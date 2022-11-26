@@ -1,5 +1,4 @@
-*
-!.gitignore
-!ft_*.c
-!libft.h
-!Makefile
+.DS_Store
+*.o
+*.a
+.idea
