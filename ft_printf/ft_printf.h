@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:25:09 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 16:53:09 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:09:25 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,7 @@ struct s_block {
 };
 
 //  libprintf.c  ///////////////////////////////////////////////////////////////
-
-// ❗️ Uses: malloc() / free()
-// ❗️ Uses: write()
-// ❗️ Uses: va_start va_end va_arg va_copy
-int				ft_printf(const char *fmt, ...);
+// NOTE Deleted ft_printf's prototype, so it can stay just in libft.h
 
 //  ftt_misc/  /////////////////////////////////////////////////////////////////
 

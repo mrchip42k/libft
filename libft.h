@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 17:00:37 by ametzen          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:17:27 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -350,6 +350,17 @@ void		ft_prot_lstdelone(t_list *lst, void (*del)(void*));
 // ❗️ Uses: write()
 // ❗️ Uses: va_start va_end va_arg va_copy
 int			ft_printf(const char *fmt, ...);
+
+// ❗️Uses: read(), malloc(), free()
+// Can return:
+// -> Heap String ended by 1 newline
+//            ... without newline (if last line of file has content)
+// -> NULL if the file has ended
+//     ... if any error occurred
+// Undefined behaviour if you feed it a binary file
+//                    ... the file changes between calls
+// Note: This implementation can NOT handle multiple file descriptors.
+char		*get_next_line(int fd);
 
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////    /    /    ////
