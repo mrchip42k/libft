@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 # ametzen libft v1: completely validated
-# v2: *TODO changelog + update v number in libft.h
+# v2.so_long...
 
 NAME = libft.a
 
@@ -110,7 +110,7 @@ SOURCES_GNL = $(addprefix get_next_line/, \
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g # TODO Debug mode! Remove this
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

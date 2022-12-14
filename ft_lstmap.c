@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-// TODO can be simplified, writes "next" twice
-
 // Norminette line savings
 static t_list	*st_nevermind(t_list **delete_this, void (*del)(void *))
 {
