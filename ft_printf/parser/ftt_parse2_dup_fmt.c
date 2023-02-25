@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 16:22:00 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/19 15:25:38 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/02/25 11:15:48 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,8 @@ t_list	*ftt_parse2_dup_fmt(t_list *block_list, const char *fmt)
 	t_list			*list_item;
 	char			*new_string;
 	size_t			new_string_len;
-	size_t			i;
 
 	list_item = block_list;
-	i = 0;
 	while (list_item)
 	{
 		block = list_item->content;

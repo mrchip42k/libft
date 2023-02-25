@@ -6,12 +6,11 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2022/11/26 17:53:15 by ametzen          ###   ########.fr        #
+#    Updated: 2023/02/25 13:47:58 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# ametzen libft v1: completely validated
-# v2: *TODO changelog + update v number in libft.h
+# ametzen libft v3
 
 NAME = libft.a
 
@@ -81,6 +80,8 @@ SOURCES =	$(SOURCES_PRINTF) \
 			ft_frull.c \
 			ft_num2str.c \
 			ft_num2str_special.c \
+			ft_int_power.c \
+			ft_shift_numbers.c \
 
 SOURCES_PRINTF = $(addprefix ft_printf/, \
 					ft_printf.c \

@@ -6,13 +6,13 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 18:05:10 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 18:08:42 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/02/25 11:18:29 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// TODO can be simplified, writes "next" twice
+//NOTE can be simplified, writes "next" twice
 
 // Norminette line savings
 static t_list	*st_nevermind(t_list **delete_this, void (*del)(void *))
