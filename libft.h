@@ -155,7 +155,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 // that trims occurrences of characters in (set) at the start and end of (s1).
 char			*ft_strtrim(char const *s1, char const *set);
 
-// ❗️ Uses: malloc(), free()
+// ❗️ Uses: malloc() / free()
 // 📂 Part 2
 // Allocate a null terminated array of pointers
 //   to allocated new strings,
@@ -246,7 +246,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 // ( f() ) will be called as many times as there are list items.
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 
-// ❗️ Uses: malloc(), free()
+// ❗️ Uses: malloc() / free()
 // 📂 Bonus
 // ( f() ) needs to malloc the element it returns. (f() may return NULL)
 // Does nothing and returns NULL if (lst), ( f() ), or ( del() ) are NULL.
