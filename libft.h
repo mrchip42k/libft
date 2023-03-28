@@ -355,7 +355,21 @@ void			ft_prot_lstdelone(t_list *lst, void (*del)(void*));
 // ❗️ Uses: va_start va_end va_arg va_copy
 int				ft_printf(const char *fmt, ...);
 
-// ❗️Uses: read(), malloc(), free()
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: va_start va_end va_arg va_copy
+char			*ft_fmt_va(const char *fmt, va_list args, size_t *size);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: va_start va_end va_arg va_copy
+char			*ft_fmt(const char *fmt, ...);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: write()
+// ❗️ Uses: va_start va_end va_arg va_copy
+int				ft_printf_fd(int fd, const char *fmt, ...);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: read()
 // Can return:
 // -> Heap String ended by 1 newline
 //            ... without newline (if last line of file has content)

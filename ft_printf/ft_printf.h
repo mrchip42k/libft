@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:25:09 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/26 17:57:17 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/03/25 18:58:22 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,10 @@ bool			ftt_process_sint_decimal(struct s_block *block, va_list args);
 bool			ftt_process_uint_decimal(struct s_block *block, va_list args);
 bool			ftt_process_uint_hex(struct s_block *block, va_list args,
 					char *base);
+
+////////////////////////////////////////////////////////////////////////////////
+
+ssize_t			ftt_write_and_return(int fd, const char *fmt, va_list args);
+char			*st_combine(size_t *size, t_list *block_list);
 
 #endif

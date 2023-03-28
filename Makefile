@@ -85,6 +85,7 @@ SOURCES =	$(SOURCES_PRINTF) \
 
 SOURCES_PRINTF = $(addprefix ft_printf/, \
 					ft_printf.c \
+					wrappers.c \
 					\
 					misc/ftt_block_list_utils.c \
 					\

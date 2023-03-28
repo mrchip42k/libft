@@ -6,11 +6,9 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:24:27 by ametzen           #+#    #+#             */
-/*   Updated: 2022/11/22 16:23:27 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/03/25 18:58:16 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*  This is the "main" file, containing ft_printf().                          */
 
 #include "ft_printf.h"
 
@@ -58,7 +56,7 @@ static void	st_copy(t_list *block_list, char *start)
 	}
 }
 
-static char	*st_combine(size_t *size, t_list *block_list)
+char	*st_combine(size_t *size, t_list *block_list)
 {
 	char			*charr;
 
@@ -74,37 +72,17 @@ static char	*st_combine(size_t *size, t_list *block_list)
 // Like printf, with FD and va_list
 ssize_t	ftt_write_and_return(int fd, const char *fmt, va_list args)
 {
-	char	*final_charr;
+	char	*formatted_result;
 	size_t	final_size;
 	ssize_t	ret;
-	t_list	*block_list;
 
-	block_list = ftt_parse_fmt(fmt, args);
-	if (block_list == NULL)
-		return (-1);
-	final_charr = st_combine(&final_size, block_list);
-	if (final_charr == NULL)
+	formatted_result = ft_fmt_va(fmt, args, &final_size);
+	if (formatted_result == NULL)
 		ret = -1;
 	else
 	{
-		ret = write(fd, final_charr, final_size);
-		free(final_charr);
+		ret = write(fd, formatted_result, final_size);
+		free(formatted_result);
 	}
-	ftt_clear_blocks(block_list);
 	return (ret);
-}
-
-int	ft_printf(const char *fmt, ...)
-{
-	va_list	args;
-	ssize_t	print_length;
-
-	if (fmt == NULL)
-		return (-1);
-	if (fmt[0] == '\0')
-		return (0);
-	va_start(args, fmt);
-	print_length = ftt_write_and_return(1, fmt, args);
-	va_end(args);
-	return (print_length);
 }
