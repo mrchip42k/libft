@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/02/25 13:47:58 by ametzen          ###   ########.fr        #
+#    Updated: 2023/03/25 18:52:58 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,10 @@ SOURCES =	$(SOURCES_PRINTF) \
 			ft_num2str_special.c \
 			ft_int_power.c \
 			ft_shift_numbers.c \
+			ft_exit.c \
+			ft_int_minmax.c \
+			ft_custom_atoi.c \
+			ft_kill_or_die.c \
 
 SOURCES_PRINTF = $(addprefix ft_printf/, \
 					ft_printf.c \

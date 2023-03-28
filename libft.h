@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/02/25 13:48:02 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/03/28 15:51:24 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <stdarg.h>
 // Fixes compilation on Linux
 # include <stdint.h>
+# include <signal.h>
 
 //// Function description explanation
 // ❗️ Uses system call(s). Check if it's allowed!
@@ -427,5 +428,31 @@ unsigned int	ft_int_shift(int input);
 // ☢️❗️ Positive numbers only.
 // ☢️❗️ (input) can't be larger than 0x80000000 (half int range).
 unsigned int	ft_get_digit_shifted(int input, int digit_index);
+
+// Returns 0 if unsuccessful, or the last index.
+// Writes result to (out) if successful.
+// Accepts whitespace before the sign and number.
+// Stops at first non numeric character.
+// Detects overflows.
+// Accepts 1 instance of + or -; or no sign at all.
+// Wont crash with NULL inputs.
+int				ft_custom_atoi(const char *str, int *out);
+
+// ❗️ Uses: write()
+// ❗️ Uses: exit()
+// 📂 ft++
+void			ft_error_exit(const char *msg);
+
+// ❗️ Uses: write()
+void			print_error(const char *msg);
+
+long			ft_imin(long a, long b);
+
+long			ft_imax(long a, long b);
+
+// ❗️ Uses: write()
+// ❗️ Uses: exit()
+// ❗️ Uses: kill()
+void			kill_or_die(int sig, pid_t pid);
 
 #endif
