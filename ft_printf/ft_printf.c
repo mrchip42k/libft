@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:24:27 by ametzen           #+#    #+#             */
-/*   Updated: 2023/03/25 18:58:16 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/04/19 16:45:08 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,11 @@ char	*st_combine(size_t *size, t_list *block_list)
 	char			*charr;
 
 	*size = st_findsize(block_list);
-	charr = malloc(*size);
+	charr = malloc(*size + 1);
 	if (charr == NULL)
 		return (NULL);
 	st_copy(block_list, charr);
+	charr[*size] = '\0';
 	return (charr);
 }
 
