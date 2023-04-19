@@ -357,19 +357,6 @@ void			ft_prot_lstdelone(t_list *lst, void (*del)(void*));
 int				ft_printf(const char *fmt, ...);
 
 // ❗️ Uses: malloc() / free()
-// ❗️ Uses: va_start va_end va_arg va_copy
-char			*ft_fmt_va(const char *fmt, va_list args, size_t *size);
-
-// ❗️ Uses: malloc() / free()
-// ❗️ Uses: va_start va_end va_arg va_copy
-char			*ft_fmt(const char *fmt, ...);
-
-// ❗️ Uses: malloc() / free()
-// ❗️ Uses: write()
-// ❗️ Uses: va_start va_end va_arg va_copy
-int				ft_printf_fd(int fd, const char *fmt, ...);
-
-// ❗️ Uses: malloc() / free()
 // ❗️ Uses: read()
 // Can return:
 // -> Heap String ended by 1 newline
@@ -428,6 +415,19 @@ unsigned int	ft_int_shift(int input);
 // ☢️❗️ Positive numbers only.
 // ☢️❗️ (input) can't be larger than 0x80000000 (half int range).
 unsigned int	ft_get_digit_shifted(int input, int digit_index);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: va_start va_end va_arg va_copy
+char			*ft_fmt_va(const char *fmt, va_list args, size_t *size);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: va_start va_end va_arg va_copy
+char			*ft_fmt(const char *fmt, ...);
+
+// ❗️ Uses: malloc() / free()
+// ❗️ Uses: write()
+// ❗️ Uses: va_start va_end va_arg va_copy
+int				ft_printf_fd(int fd, const char *fmt, ...);
 
 // Returns 0 if unsuccessful, or the last index.
 // Writes result to (out) if successful.
