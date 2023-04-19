@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/03/25 18:52:58 by ametzen          ###   ########.fr        #
+#    Updated: 2023/03/29 18:31:55 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,6 +86,7 @@ SOURCES =	$(SOURCES_PRINTF) \
 			ft_int_minmax.c \
 			ft_custom_atoi.c \
 			ft_kill_or_die.c \
+			ft_lstpop.c \
 
 SOURCES_PRINTF = $(addprefix ft_printf/, \
 					ft_printf.c \

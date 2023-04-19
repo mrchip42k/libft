@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/03/28 15:51:24 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/04/19 16:50:22 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,6 +256,12 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst,
 					void *(*f)(void *), void (*del)(void *));
 
+// 📂 List personal addition
+// (index) == -1: pop last item
+// Return NULL if: -item at index does not exist
+//                 -parameters invalid
+t_list			*ft_lstpop(t_list **lst, long index);
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////  ++++++++  ////
 ////  Personal additions ft++ : Protected versions  ///////////  ++++++++  /////
@@ -453,6 +459,18 @@ long			ft_imax(long a, long b);
 // ❗️ Uses: write()
 // ❗️ Uses: exit()
 // ❗️ Uses: kill()
-void			kill_or_die(int sig, pid_t pid);
+void			kill_or_die(pid_t pid, int sig);
+
+// ❗️ Uses: write()
+// ❗️ Uses: exit()
+// ❗️ Uses: kill()
+// Like kill_or_die(), but also exits if (pid) is not positive.
+void			kill_single_or_die(pid_t pid, int sig);
+
+// ❗️ Uses: write()
+// ❗️ Uses: exit()
+// ❗️ Uses: kill()
+// Like kill_single_or_die(), but ONLY exits if (pid) is not positive.
+int				kill1(pid_t pid, int sig);
 
 #endif
