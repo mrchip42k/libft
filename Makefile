@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/03/29 18:31:55 by ametzen          ###   ########.fr        #
+#    Updated: 2023/05/04 16:07:31 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@
 
 NAME = libft.a
 
+# REVIEW experimental
+# $(SOURCES_ANYTYPE)
 SOURCES =	$(SOURCES_PRINTF) \
 			$(SOURCES_GNL) \
 			ft_putnbr_fd.c \
@@ -113,6 +115,8 @@ SOURCES_GNL = $(addprefix get_next_line/, \
 					get_next_line.c \
 					get_next_line_utils.c \
 				)
+
+SOURCES_ANYTYPE = $(wildcard anytype/*.c anytype/anylist/*.c)
 
 OBJECTS = $(SOURCES:.c=.o)
 
