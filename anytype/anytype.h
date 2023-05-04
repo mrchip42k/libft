@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:32:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/04 17:29:51 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/04 19:07:37 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,9 @@ u_int64_t		anylist_count(const t_anylist *start);
 t_anylist		*anylist_get_last(const t_anylist *start);
 
 t_any_error		anylist_add_back(t_anylist **start, t_anylist *new);
+
+//TODO continue making the rest of list functions from t_list
+
+//TODO does this need more functions than t_list?
 
 #endif //ANYTYPE_H
