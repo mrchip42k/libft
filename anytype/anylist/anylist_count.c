@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   any_list_add_front.c                               :+:      :+:    :+:   */
+/*   any_list_count.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 16:34:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/04 16:50:23 by ametzen          ###   ########.fr       */
+/*   Created: 2023/05/04 16:53:17 by ametzen           #+#    #+#             */
+/*   Updated: 2023/05/04 17:27:11 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../anytype.h"
 
-t_any_error	any_list_add_front(t_any_list **start, t_any_list *new)
+u_int64_t	anylist_count(const t_anylist *start)
 {
-	if (new == NULL || start == NULL)
-		return (e_any_error_input);
-	if (*start)
+	u_int64_t	result;
+	t_anylist	*current;
+
+	if (start == NULL)
+		return (0);
+	result = 1;
+	current = (t_anylist *)start;
+	while (current->next)
 	{
-		new->next = *start;
-		(*start)->prev = new;
+		current = current->next;
+		result++;
 	}
-	*start = new;
-	return (e_any_error_ok);
+	return (result);
 }
