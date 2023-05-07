@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:32:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/04 19:07:37 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 19:17:42 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,8 @@ typedef struct s_anylist {
 t_anylist		*anylist_new_item();
 
 // An input of (*start) == NULL is accepted
+// Note that this won't try to traverse to items before *start.
+// However providing a *start that isnt the actual start is supported.
 //  (means empty list, that will be populated with (new).)
 // Requirements:
 //   e_any_error_input: (new) and (start) can't be NULL.
@@ -120,7 +122,7 @@ t_any_error		anylist_add_front(t_anylist **start, t_anylist *new);
 u_int64_t		anylist_count(const t_anylist *start);
 
 // Returns NULL if (start) is NULL.
-t_anylist		*anylist_get_last(const t_anylist *start);
+t_anylist		*anylist_get_last(const t_anylist *search_start_item);
 
 t_any_error		anylist_add_back(t_anylist **start, t_anylist *new);
 
