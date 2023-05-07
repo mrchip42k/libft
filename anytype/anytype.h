@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:32:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/07 19:28:20 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 21:01:40 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,25 @@ typedef enum e_any_error {
 	e_any_error_wrong_type,
 }		t_any_error;
 
+// Return value for any_get_heaptype().
+typedef enum e_any_heaptype {
+	e_any_heaptype_not_heap = 0,
+	e_any_heaptype_owned_heap,
+	e_any_heaptype_shared_heap,
+}		t_any_heaptype;
+
 // Declared in advance so the rest of the header knows it exists
 union	u_any;
+
+/*------< General helper functions >------------------------------------------*/
+
+t_any_heaptype	any_get_heaptype(const union u_any *any);
+
+// ❗️ Uses: WHATEVER ALL DESTRUCTORS CAN USE
+// Automatically run the appropriate destructor on (target)'s data,
+//   if it is an owned heap type.
+// Otherwise, do nothing.
+void			any_try_destroy(union u_any *target);
 
 /*------< Individual types >--------------------------------------------------*/
 
@@ -86,23 +103,34 @@ t_any_error		any_set_int32_t(union u_any *any, int32_t value);
 
 /*------< Main union >--------------------------------------------------------*/
 
+// (type) is ALWAYS present, and at the same place.
+// (is_heap_owned) is ONLY PRESENT for heap types.
 union u_any {
 	enum e_any_type			type;
+	bool					is_heap_owned;
 	struct s_any_bool		_bool;
 	struct s_any_int32_t	_int32_t;
 };
 
 /*------< Linked list using Anytype >-----------------------------------------*/
 
+// For the most part, most functions to handle Anylists are equivalent to
+// those made for t_list.
+// Notable difference is t_list functions that returned void, now return
+// an error code enum to at the very least notify if the function has been
+// misused instead of crashing or (what t_list does) silently doing nothing.
+
 typedef struct s_anylist {
 	struct s_anylist	*next;
-	union u_any			any;
+	union u_any			any_content;
 }		t_anylist;
 
+// t_list equivalent: ft_lstnew()
 // ❗️ Uses: malloc()
 // Returns NULL if memory allocation failed.
 t_anylist		*anylist_new_item();
 
+// t_list equivalent: ft_lstadd_front()
 // An input of (*start) == NULL is accepted
 // Note that this won't try to traverse to items before *start.
 // However providing a *start that isnt the actual start is supported.
@@ -111,15 +139,30 @@ t_anylist		*anylist_new_item();
 //   e_any_error_input: (new) and (start) can't be NULL.
 t_any_error		anylist_add_front(t_anylist **destination, t_anylist *new);
 
+// t_list equivalent: ft_lstsize()
 // Returns 0 if (start) is NULL.
 u_int64_t		anylist_count(const t_anylist *start);
 
+// t_list equivalent: ft_lstlast()
 // Returns NULL if (start) is NULL.
 t_anylist		*anylist_get_last(const t_anylist *search_start_item);
 
+// t_list equivalent: ft_lstadd_back()
 t_any_error		anylist_add_back(t_anylist **start, t_anylist *new);
 
+// t_list equivalent: ft_lstdelone()
+// Will set (*item) to NULL.
+// Will automatically run a destructor for the item's type if it exists.
+// Wont error if (*item) is NULL, but
+// Requirements:
+//   e_any_error_input: (item) can't be NULL.
+t_any_error		anylist_delete_item(t_anylist **item);
+
 //TODO continue making the rest of list functions from t_list
+// t_list equivalent: 
+// t_list equivalent: 
+// t_list equivalent: 
+// t_list equivalent: 
 
 //TODO does this need more functions than t_list?
 
