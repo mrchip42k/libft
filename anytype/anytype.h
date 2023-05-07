@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:32:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/07 19:17:42 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 19:28:20 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,16 +92,9 @@ union u_any {
 	struct s_any_int32_t	_int32_t;
 };
 
-/*------< 2 way linked list using Anytype >-----------------------------------*/
-
-// This is a 2 way linked list.
-// Unlike t_list from libft, to create the first element in a list
-//   you CAN'T just assign it to a pointer.
-// You must place it with any_list_add_front() or any_list_add_back().
-// TODO which one is faster: suggest it in the previous sentence
+/*------< Linked list using Anytype >-----------------------------------------*/
 
 typedef struct s_anylist {
-	struct s_anylist	*prev;
 	struct s_anylist	*next;
 	union u_any			any;
 }		t_anylist;
@@ -116,7 +109,7 @@ t_anylist		*anylist_new_item();
 //  (means empty list, that will be populated with (new).)
 // Requirements:
 //   e_any_error_input: (new) and (start) can't be NULL.
-t_any_error		anylist_add_front(t_anylist **start, t_anylist *new);
+t_any_error		anylist_add_front(t_anylist **destination, t_anylist *new);
 
 // Returns 0 if (start) is NULL.
 u_int64_t		anylist_count(const t_anylist *start);

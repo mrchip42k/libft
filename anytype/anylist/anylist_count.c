@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   any_list_count.c                                   :+:      :+:    :+:   */
+/*   anylist_count.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:53:17 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/04 17:27:11 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 19:31:11 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 u_int64_t	anylist_count(const t_anylist *start)
 {
-	u_int64_t	result;
+	u_int64_t	count;
 	t_anylist	*current;
 
 	if (start == NULL)
 		return (0);
-	result = 1;
+	count = 1;
 	current = (t_anylist *)start;
 	while (current->next)
 	{
 		current = current->next;
-		result++;
+		count++;
 	}
-	return (result);
+	return (count);
 }

@@ -6,25 +6,20 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:34:57 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/07 19:18:39 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 19:28:42 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../anytype.h"
 
-//TODO detect if there was an item before *start.
-//     And relink that if needed
-
-t_any_error	anylist_add_front(t_anylist **start, t_anylist *new)
+t_any_error	anylist_add_front(t_anylist **destination, t_anylist *new)
 {
-	if (new == NULL || start == NULL)
+	if (new == NULL || destination == NULL)
 		return (e_any_error_input);
-	if (*start)
+	if (*destination)
 	{
-		new->next = *start;
-		(*start)->prev = new;
+		new->next = *destination;
 	}
-	new->prev = NULL;
-	*start = new;
+	*destination = new;
 	return (e_any_error_ok);
 }

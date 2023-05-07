@@ -6,13 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:18:48 by ametzen           #+#    #+#             */
-/*   Updated: 2023/05/07 19:14:45 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/05/07 19:31:31 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../anytype.h"
-
-//TODO make a get_first that traverses in reverse
 
 t_anylist	*anylist_get_last(const t_anylist *search_start_item)
 {
