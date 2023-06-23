@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/03/29 18:31:55 by ametzen          ###   ########.fr        #
+#    Updated: 2023/06/23 15:11:17 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,7 +117,7 @@ SOURCES_GNL = $(addprefix get_next_line/, \
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g # TODO Debug mode! Remove this
+CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 
