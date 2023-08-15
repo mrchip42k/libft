@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/04/19 16:50:22 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/15 16:14:01 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -472,5 +472,9 @@ void			kill_single_or_die(pid_t pid, int sig);
 // ❗️ Uses: kill()
 // Like kill_single_or_die(), but ONLY exits if (pid) is not positive.
 int				kill1(pid_t pid, int sig);
+
+// ❗️ Uses: free()
+//Deletes, and sets to NULL, what gets created by ft_split().
+void			ft_delete_split(char ***split);
 
 #endif
