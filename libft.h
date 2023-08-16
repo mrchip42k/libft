@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/15 16:14:01 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/16 14:07:39 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,12 +341,14 @@ char			*ft_prot_strdup(const char *s1);
 
 // ❗️ Uses: free()
 // 📂 ft++ / 🛡 prot bonus
+// (del) is allowed to be NULL if (*lst->content) does not need to be freed.
 // ☢️❗️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void			ft_prot_lstclear(t_list **lst, void (*del)(void*));
 
 // ❗️ Uses: free()
 // 📂 ft++ / 🛡 prot bonus
+// (del) is allowed to be NULL if (lst->content) does not need to be freed.
 // ☢️❗️ WARNING: Protection may cause this to silently leak.
 //  Consider using the unprotected version to notice if the function is misused.
 void			ft_prot_lstdelone(t_list *lst, void (*del)(void*));
