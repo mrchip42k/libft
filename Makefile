@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/08/21 10:28:22 by ametzen          ###   ########.fr        #
+#    Updated: 2023/08/21 10:32:30 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,6 +119,7 @@ SOURCES_GNL = $(addprefix get_next_line/, \
 SOURCES_DICT = $(addprefix dict/, \
 				dict_delete.c \
 				dict_find.c \
+				dict_get.c \
 				dict_pop.c \
 				dict_set.c \
 				)

@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 16:20:52 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:23:42 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 10:36:46 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,12 @@ void		dict_remove_key(t_dict **dict, char *key,
 // ❗️ Uses: free()
 // Clears entire list.
 void		dict_delete_all(t_dict **dict, t_dict_value_deleter *deleter);
+
+// Return the value field of the item with the matching key.
+// Return NULL if the value field contained NULL.
+//             if (dict | key) == NULL.
+//             if the item with (key) does not exist.
+//             if the list is empty.
+void		*dict_get_value_by_key(t_dict **dict, char *key);
 
 #endif //DICT_H
