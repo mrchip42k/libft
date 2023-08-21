@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/16 14:07:39 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:22:33 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 // Fixes compilation on Linux
 # include <stdint.h>
 # include <signal.h>
+
+# include "dict/dict.h"
 
 //// Function description explanation
 // ❗️ Uses system call(s). Check if it's allowed!

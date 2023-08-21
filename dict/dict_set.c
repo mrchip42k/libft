@@ -6,11 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 15:40:54 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:23:53 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:23:08 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
+#include "../libft.h"
 
 void	dict_item_replace_value(t_dict *element, void *new_value,
 			t_dict_value_deleter *deleter)

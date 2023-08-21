@@ -6,11 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:51:23 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:27:54 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:22:57 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
+#include "../libft.h"
 
 static void	dict_delete_one(t_dict *to_delete, t_dict_value_deleter *deleter)
 {

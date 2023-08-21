@@ -6,11 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 10:32:07 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:35:22 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:23:04 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
+#include "../libft.h"
 
 void	*dict_get_value_by_key(t_dict **dict, char *key)
 {

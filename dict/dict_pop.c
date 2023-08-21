@@ -6,11 +6,11 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:50:51 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:22:27 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:23:06 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
+#include "../libft.h"
 
 t_dict	*dict_pop_key(t_dict **dict, char *key)
 {

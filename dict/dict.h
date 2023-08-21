@@ -6,14 +6,12 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 16:20:52 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 10:36:46 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/21 11:22:50 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DICT_H
 # define DICT_H
-
-# include "../libft.h"
 
 # define T_DICT_KEY_CAPACITY 4242
 
