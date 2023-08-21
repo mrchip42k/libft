@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/08/15 16:14:14 by ametzen          ###   ########.fr        #
+#    Updated: 2023/08/21 10:28:22 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME = libft.a
 
 SOURCES =	$(SOURCES_PRINTF) \
 			$(SOURCES_GNL) \
+			$(SOURCES_DICT) \
 			ft_putnbr_fd.c \
 			ft_itoa.c \
 			ft_substr.c \
@@ -113,6 +114,13 @@ SOURCES_PRINTF = $(addprefix ft_printf/, \
 SOURCES_GNL = $(addprefix get_next_line/, \
 					get_next_line.c \
 					get_next_line_utils.c \
+				)
+
+SOURCES_DICT = $(addprefix dict/, \
+				dict_delete.c \
+				dict_find.c \
+				dict_pop.c \
+				dict_set.c \
 				)
 
 OBJECTS = $(SOURCES:.c=.o)
