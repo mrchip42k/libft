@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:40:59 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 11:23:02 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/08/23 14:02:51 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,27 @@ t_dict	*dict_find_key_or_create(t_dict **dict, char *key)
 {
 	t_dict	*current;
 	t_dict	**search_attempt;
+	t_dict	*new;
 
 	if (dict == NULL || key == NULL)
 		return (NULL);
 	search_attempt = dict_find_key(dict, key);
 	if (search_attempt != NULL)
 		return (*search_attempt);
-	current = *dict;
-	while (current->next)
-		current = current->next;
-	current->next = ft_calloc(1, sizeof(t_dict));
-	if (current->next == NULL)
+	new = ft_calloc(1, sizeof(t_dict));
+	if (new == NULL)
 		return (NULL);
-	current = current->next;
-	ft_strlcpy(current->key, key, T_DICT_KEY_CAPACITY);
-	return (current);
+	if (*dict == NULL)
+		*dict = new;
+	else
+	{
+		current = *dict;
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
+	ft_strlcpy(new->key, key, T_DICT_KEY_CAPACITY);
+	new->next = NULL;
+	new->value = NULL;
+	return (new);
 }
