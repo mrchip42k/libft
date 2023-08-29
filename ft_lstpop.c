@@ -32,24 +32,25 @@ static t_list	*pop_last(t_list **lst)
 
 static t_list	*pop_forward(t_list **lst, long index)
 {
-	t_list	*subject;
-	t_list	**pointer_to_subject;
+	t_list	*current;
+	t_list	**pointer_to_current;
 	long	i;
 
-	pointer_to_subject = lst;
-	subject = *pointer_to_subject;
+	pointer_to_current = lst;
+	current = *pointer_to_current;
 	i = 0;
-	while (subject != NULL && i < index)
+	while (current && i < index)
 	{
-		pointer_to_subject = &subject->next;
-		subject = subject->next;
+		pointer_to_current = &current->next;
+		current = current->next;
 		i++;
 	}
-	if (subject->next != NULL)
-		*pointer_to_subject = subject->next;
+	if (current->next)
+		*pointer_to_current = current->next;
 	else
-		*pointer_to_subject = NULL;
-	return (subject);
+		*pointer_to_current = NULL;
+	current->next = NULL;
+	return (current);
 }
 
 t_list	*ft_lstpop(t_list **lst, long index)
