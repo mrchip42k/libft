@@ -6,7 +6,7 @@
 #    By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 10:03:58 by ametzen           #+#    #+#              #
-#    Updated: 2023/08/21 10:32:30 by ametzen          ###   ########.fr        #
+#    Updated: 2023/09/09 17:21:57 by ametzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ SOURCES =	$(SOURCES_PRINTF) \
 			ft_shift_numbers.c \
 			ft_exit.c \
 			ft_int_minmax.c \
-			ft_custom_atoi.c \
+			ft_secure_atol.c \
 			ft_kill_or_die.c \
 			ft_lstpop.c \
 			ft_delete_split.c \

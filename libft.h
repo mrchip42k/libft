@@ -6,7 +6,7 @@
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:46:56 by ametzen           #+#    #+#             */
-/*   Updated: 2023/08/21 11:22:33 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/09/09 17:19:30 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -439,14 +439,15 @@ char			*ft_fmt(const char *fmt, ...);
 // ❗️ Uses: va_start va_end va_arg va_copy
 int				ft_printf_fd(int fd, const char *fmt, ...);
 
-// Returns 0 if unsuccessful, or the last index.
 // Writes result to (out) if successful.
 // Accepts whitespace before the sign and number.
-// Stops at first non numeric character.
-// Detects overflows.
 // Accepts 1 instance of + or -; or no sign at all.
-// Wont crash with NULL inputs.
-int				ft_custom_atoi(const char *str, int *out);
+// Stops at first non numeric character.
+// Fails if the string still contains anything afterwards.
+// Fails in case of overflow (signed long type).
+// Fails but wont crash with NULL inputs.
+// Return: false if unsuccessful for any reason.
+bool			ft_secure_atol(const char *str, long *out);
 
 // ❗️ Uses: write()
 // ❗️ Uses: exit()

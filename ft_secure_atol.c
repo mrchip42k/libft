@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_custom_atoi.c                                   :+:      :+:    :+:   */
+/*   ft_secure_atol.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametzen <ametzen@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:08:38 by ametzen           #+#    #+#             */
-/*   Updated: 2023/03/28 15:51:38 by ametzen          ###   ########.fr       */
+/*   Updated: 2023/09/09 17:23:30 by ametzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	custom_atoi_parsing(const char *str, long *result, long *sign)
+static long	custom_atoi_parsing(const char *str, long *result, long *sign)
 {
-	int		i;
+	long	i;
 	bool	has_read_any_digit;
 
 	i = 0;
@@ -31,25 +31,33 @@ static int	custom_atoi_parsing(const char *str, long *result, long *sign)
 		has_read_any_digit = true;
 		*result *= 10;
 		*result += str[i] - '0';
-		if (*result != (int) *result)
-			return (0);
+		if (*result != (long) *result)
+			return (-1);
 		i++;
 	}
-	return (i && has_read_any_digit);
+	if (has_read_any_digit)
+		return (i);
+	else
+		return (-1);
 }
 
-int	ft_custom_atoi(const char *str, int *out)
+bool	ft_secure_atol(const char *str, long *out)
 {
 	long	result;
 	long	sign;
-	int		parsing_return;
+	long	parsing_return;
 
 	if (str == NULL || out == NULL || str[0] == '\0')
-		return (0);
+		return (false);
 	sign = 1;
 	result = 0;
 	parsing_return = custom_atoi_parsing(str, &result, &sign);
-	if (parsing_return > 0)
+	if (parsing_return > 0
+		&& ft_strlen(str) == (size_t)parsing_return)
+	{
 		*out = result * sign;
-	return (parsing_return);
+		return (true);
+	}
+	else
+		return (false);
 }
