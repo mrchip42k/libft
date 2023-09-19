@@ -150,6 +150,8 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 // 📂 Part 2
 // Allocate a new string,
 // concatenating (s1) and (s2).
+// ☢️❗️ If EITHER (s1) or (s2) are NULL, this function refuses to make
+//      a result. (🛡 Protected version available, that remedies this)
 char			*ft_strjoin(char const *s1, char const *s2);
 
 // ❗️ Uses: malloc()
@@ -340,6 +342,14 @@ int				ft_prot_atoi(const char *str);
 // Like strdup, but returns NULL instead of crashing if (s1) == NULL.
 // ☢️❗️ Ambiguous return: null input, OR malloc error
 char			*ft_prot_strdup(const char *s1);
+
+// ❗️ Uses: malloc()
+// 📂 ft++ / 🛡 prot libc
+// Allocate a new string,
+// concatenating (s1) and (s2).
+// This will accept either (s1) or (s2) being NULL,
+// and the return will be ft_strdup(the parameter that remains).
+char			*ft_prot_strjoin(char const *s1, char const *s2);
 
 // ❗️ Uses: free()
 // 📂 ft++ / 🛡 prot bonus
